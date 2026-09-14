@@ -295,6 +295,10 @@ table {
   text-align: left;
 }
 
+.title--center {
+  text-align: center;
+}
+
 .title__accent {
   color: var(--color-text-accent);
   font-style: italic;
@@ -711,6 +715,119 @@ table {
   opacity: 1;
 }
 
+.favorite-coffee {
+  margin-top: 100px;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.slider__button {
+  display: none;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border-primary);
+  border-radius: 50%;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
+}
+
+.slider__button:hover,
+.slider__button:focus-visible {
+  color: var(--color-text-inverse);
+  background-color: var(--color-bg-container);
+}
+
+.slider__button--prev .slider__arrow {
+  transform: rotate(180deg);
+}
+
+.slider__viewport {
+  flex-grow: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.slider__list {
+  display: flex;
+}
+
+.slider__slide {
+  flex: 0 0 100%;
+}
+
+.slider__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.slider__image {
+  aspect-ratio: 1 / 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.slider__image--smores-frappuccino {
+  background-image: url("assets/images/coffee-smores-frappuccino.png");
+}
+
+.slider__image--caramel-macchiato {
+  background-image: url("assets/images/coffee-caramel-macchiato.png");
+}
+
+.slider__image--ice-coffee {
+  background-image: url("assets/images/coffee-ice-coffee.png");
+}
+
+.slider__description {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+
+.slider__name,
+.slider__price {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.slider__text {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.slider__controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.slider__control {
+  width: 40px;
+  height: 4px;
+  background-color: var(--color-border-primary);
+  transition: background-color 0.2s;
+}
+
+.slider__control--active {
+  background-color: var(--color-text-primary);
+}
 
 @media (min-width: 768px) {
   .container {
@@ -759,6 +876,10 @@ table {
 @media (min-width: 1024px) {
   .hero__inner {
     padding: 100px;
+  }
+
+  .slider__button {
+    display: flex;
   }
 
   .theme-switch {
