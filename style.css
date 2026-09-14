@@ -42,6 +42,7 @@ body {
     sans-serif;
   font-size: 16px;
   font-weight: 400;
+  font-optical-sizing: none;
   line-height: 1.5;
   color: var(--color-text-primary);
   background-color: var(--color-bg-page);
@@ -111,6 +112,14 @@ table {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 16px;
+}
+
+.section {
+  margin-top: 100px;
+}
+
+.section--first {
+  margin-top: 20px;
 }
 
 .header {
@@ -308,10 +317,6 @@ table {
   color: var(--color-text-inverse);
 }
 
-.about {
-  margin-top: 100px;
-}
-
 .about__grid {
   display: grid;
   gap: 40px;
@@ -352,10 +357,6 @@ table {
 
 .about__image--couple {
   background-image: url("assets/images/about-couple.jpg");
-}
-
-.mobile-app {
-  margin-top: 100px;
 }
 
 .mobile-app__container {
@@ -446,7 +447,6 @@ table {
 }
 
 .footer {
-  margin-top: 100px;
   margin-bottom: 20px;
 }
 
@@ -638,10 +638,6 @@ table {
   overflow: hidden;
 }
 
-.hero {
-  margin-top: 20px;
-}
-
 .hero__inner {
   padding: 60px 16px;
   color: var(--color-text-inverse);
@@ -713,10 +709,6 @@ table {
   max-width: 20px;
   margin-left: 8px;
   opacity: 1;
-}
-
-.favorite-coffee {
-  margin-top: 100px;
 }
 
 .slider {
@@ -829,9 +821,157 @@ table {
   background-color: var(--color-text-primary);
 }
 
+.menu__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.menu__more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-bg-container);
+  border-radius: 50%;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
+}
+
+.menu__more--hidden {
+  display: none;
+}
+
+.menu__more:hover,
+.menu__more:focus-visible {
+  color: var(--color-text-inverse);
+  background-color: var(--color-bg-container);
+}
+
+.menu__icon {
+  stroke-width: 1;
+}
+
+.categories__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.categories__button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px 8px 8px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  border-radius: 100px;
+  box-shadow: inset 0 0 0 1px var(--color-border-primary);
+  transition:
+    color 0.2s,
+    background-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.categories__icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: var(--color-border-primary);
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.categories__button:hover,
+.categories__button--active {
+  color: var(--color-text-inverse);
+  background-color: var(--color-bg-container);
+  box-shadow: none;
+}
+
+.categories__button:hover .categories__icon,
+.categories__button--active .categories__icon {
+  background-color: var(--color-text-inverse);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 310px);
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-height: 506px;
+  cursor: pointer;
+  border-radius: 40px;
+  box-shadow: inset 0 0 0 1px var(--color-border-primary);
+}
+
+.card--hidden {
+  display: none;
+}
+
+.card__box {
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 40px;
+}
+
+.card__image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card__image {
+  transform: scale(1);
+}
+
+.card__title {
+  margin: 20px 20px 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.card__description {
+  margin: 12px 20px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.card__price {
+  margin: auto 20px 20px;
+  padding-top: 12px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
 @media (min-width: 768px) {
   .container {
     padding: 0 40px;
+  }
+
+  .categories__list {
+    gap: 16px;
   }
 
   .header__actions {
@@ -876,6 +1016,15 @@ table {
 @media (min-width: 1024px) {
   .hero__inner {
     padding: 100px;
+  }
+
+  .menu__title {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .menu__more {
+    display: none;
   }
 
   .slider__button {
