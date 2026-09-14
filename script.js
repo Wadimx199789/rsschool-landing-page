@@ -45,6 +45,15 @@ const initMobileMenu = () => {
       toggleMenu(false);
     }
   });
+
+  document.addEventListener("keydown", (event) => {
+    if (
+      event.key === "Escape" &&
+      mobileMenu.classList.contains("mobile-menu--open")
+    ) {
+      toggleMenu(false);
+    }
+  });
 };
 
 if (themeSwitch) {
