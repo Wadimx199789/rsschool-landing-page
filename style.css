@@ -826,7 +826,8 @@ table {
 }
 
 .menu__more--hidden {
-  display: none;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .menu__more:hover {
@@ -891,6 +892,12 @@ table {
   justify-content: center;
   gap: 40px;
   width: 100%;
+}
+
+.cards__empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--color-text-primary);
 }
 
 .card {
