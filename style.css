@@ -739,6 +739,7 @@ table {
 
 .slider__list {
   display: flex;
+  transition: transform 0.3s ease;
 }
 
 .slider__slide {
