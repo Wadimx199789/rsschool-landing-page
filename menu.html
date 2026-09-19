@@ -251,19 +251,28 @@
                   <button
                     class="categories__button categories__button--active"
                     type="button"
+                    data-category="coffee"
                   >
                     <span class="categories__icon">☕</span>
                     Coffee
                   </button>
                 </li>
                 <li class="categories__item">
-                  <button class="categories__button" type="button">
+                  <button
+                    class="categories__button"
+                    type="button"
+                    data-category="tea"
+                  >
                     <span class="categories__icon">🫖</span>
                     Tea
                   </button>
                 </li>
                 <li class="categories__item">
-                  <button class="categories__button" type="button">
+                  <button
+                    class="categories__button"
+                    type="button"
+                    data-category="dessert"
+                  >
                     <span class="categories__icon">🍰</span>
                     Dessert
                   </button>
@@ -271,7 +280,7 @@
               </ul>
             </nav>
             <ul class="cards">
-              <li class="card" data-category="coffee">
+              <li class="card">
                 <div class="card__box">
                   <img
                     class="card__image"
@@ -287,7 +296,7 @@
                 </p>
                 <span class="card__price">$7.00</span>
               </li>
-              <li class="card" data-category="coffee">
+              <li class="card">
                 <div class="card__box">
                   <img
                     class="card__image"
@@ -303,7 +312,7 @@
                 </p>
                 <span class="card__price">$7.00</span>
               </li>
-              <li class="card" data-category="coffee">
+              <li class="card">
                 <div class="card__box">
                   <img
                     class="card__image"
@@ -318,7 +327,7 @@
                 </p>
                 <span class="card__price">$5.50</span>
               </li>
-              <li class="card" data-category="coffee">
+              <li class="card">
                 <div class="card__box">
                   <img
                     class="card__image"
@@ -333,7 +342,7 @@
                 </p>
                 <span class="card__price">$5.00</span>
               </li>
-              <li class="card" data-category="coffee">
+              <li class="card">
                 <div class="card__box">
                   <img
                     class="card__image"
@@ -346,7 +355,7 @@
                 <p class="card__description">Classic black coffee</p>
                 <span class="card__price">$4.50</span>
               </li>
-              <li class="card" data-category="coffee">
+              <li class="card">
                 <div class="card__box">
                   <img
                     class="card__image"
@@ -362,7 +371,7 @@
                 </p>
                 <span class="card__price">$5.50</span>
               </li>
-              <li class="card" data-category="coffee">
+              <li class="card">
                 <div class="card__box">
                   <img
                     class="card__image"
@@ -377,7 +386,7 @@
                 </p>
                 <span class="card__price">$5.50</span>
               </li>
-              <li class="card" data-category="coffee">
+              <li class="card">
                 <div class="card__box">
                   <img
                     class="card__image"
@@ -389,191 +398,6 @@
                 <h3 class="card__title">Coffee with cognac</h3>
                 <p class="card__description">
                   Fragrant black coffee with cognac and whipped cream
-                </p>
-                <span class="card__price">$6.50</span>
-              </li>
-              <li class="card card--hidden" data-category="tea">
-                <div class="card__box">
-                  <img
-                    class="card__image"
-                    src="assets/images/menu/moroccan-tea.jpg"
-                    alt="Moroccan"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 class="card__title">Moroccan</h3>
-                <p class="card__description">
-                  Fragrant black tea with the addition of tangerine, cinnamon,
-                  honey, lemon and mint
-                </p>
-                <span class="card__price">$4.50</span>
-              </li>
-              <li class="card card--hidden" data-category="tea">
-                <div class="card__box">
-                  <img
-                    class="card__image"
-                    src="assets/images/menu/ginger-tea.jpg"
-                    alt="Ginger"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 class="card__title">Ginger</h3>
-                <p class="card__description">
-                  Original black tea with fresh ginger, lemon and honey
-                </p>
-                <span class="card__price">$5.00</span>
-              </li>
-              <li class="card card--hidden" data-category="tea">
-                <div class="card__box">
-                  <img
-                    class="card__image"
-                    src="assets/images/menu/cranberry-tea.jpg"
-                    alt="Cranberry"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 class="card__title">Cranberry</h3>
-                <p class="card__description">
-                  Invigorating black tea with cranberry and honey
-                </p>
-                <span class="card__price">$5.00</span>
-              </li>
-              <li class="card card--hidden" data-category="tea">
-                <div class="card__box">
-                  <img
-                    class="card__image"
-                    src="assets/images/menu/sea-buckthorn-tea.jpg"
-                    alt="Sea buckthorn"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 class="card__title">Sea buckthorn</h3>
-                <p class="card__description">
-                  Toning sweet black tea with sea buckthorn, fresh thyme and
-                  cinnamon
-                </p>
-                <span class="card__price">$5.50</span>
-              </li>
-              <li class="card card--hidden" data-category="dessert">
-                <div class="card__box">
-                  <img
-                    class="card__image"
-                    src="assets/images/menu/marble-cheesecake.jpg"
-                    alt="Marble cheesecake"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 class="card__title">Marble cheesecake</h3>
-                <p class="card__description">
-                  Philadelphia cheese with lemon zest on a light sponge cake and
-                  red currant jam
-                </p>
-                <span class="card__price">$3.50</span>
-              </li>
-              <li class="card card--hidden" data-category="dessert">
-                <div class="card__box">
-                  <img
-                    class="card__image"
-                    src="assets/images/menu/red-velvet.jpg"
-                    alt="Red velvet"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 class="card__title">Red velvet</h3>
-                <p class="card__description">
-                  Layer cake with cream cheese frosting
-                </p>
-                <span class="card__price">$4.00</span>
-              </li>
-              <li class="card card--hidden" data-category="dessert">
-                <div class="card__box">
-                  <img
-                    class="card__image"
-                    src="assets/images/menu/cheesecakes.jpg"
-                    alt="Cheesecakes"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 class="card__title">Cheesecakes</h3>
-                <p class="card__description">
-                  Soft cottage cheese pancakes with sour cream and fresh berries
-                  and sprinkled with powdered sugar
-                </p>
-                <span class="card__price">$4.50</span>
-              </li>
-              <li class="card card--hidden" data-category="dessert">
-                <div class="card__box">
-                  <img
-                    class="card__image"
-                    src="assets/images/menu/creme-brulee.jpg"
-                    alt="Creme brulee"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 class="card__title">Creme brulee</h3>
-                <p class="card__description">
-                  Delicate creamy dessert in a caramel basket with wild berries
-                </p>
-                <span class="card__price">$4.00</span>
-              </li>
-              <li class="card card--hidden" data-category="dessert">
-                <div class="card__box">
-                  <img
-                    class="card__image"
-                    src="assets/images/menu/pancakes.jpg"
-                    alt="Pancakes"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 class="card__title">Pancakes</h3>
-                <p class="card__description">
-                  Tender pancakes with strawberry jam and fresh strawberries
-                </p>
-                <span class="card__price">$4.50</span>
-              </li>
-              <li class="card card--hidden" data-category="dessert">
-                <div class="card__box">
-                  <img
-                    class="card__image"
-                    src="assets/images/menu/honey-cake.jpg"
-                    alt="Honey cake"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 class="card__title">Honey cake</h3>
-                <p class="card__description">
-                  Classic honey cake with delicate custard
-                </p>
-                <span class="card__price">$4.50</span>
-              </li>
-              <li class="card card--hidden" data-category="dessert">
-                <div class="card__box">
-                  <img
-                    class="card__image"
-                    src="assets/images/menu/chocolate-cake.jpg"
-                    alt="Chocolate cake"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 class="card__title">Chocolate cake</h3>
-                <p class="card__description">
-                  Cake with hot chocolate filling and nuts with dried apricots
-                </p>
-                <span class="card__price">$5.50</span>
-              </li>
-              <li class="card card--hidden" data-category="dessert">
-                <div class="card__box">
-                  <img
-                    class="card__image"
-                    src="assets/images/menu/black-forest.jpg"
-                    alt="Black forest"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 class="card__title">Black forest</h3>
-                <p class="card__description">
-                  A combination of thin sponge cake with cherry jam and light
-                  chocolate mousse
                 </p>
                 <span class="card__price">$6.50</span>
               </li>
