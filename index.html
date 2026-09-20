@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee House</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link
+      rel="preload"
+      href="assets/images/logo.png"
+      as="image"
+      type="image/png"
+    />
+    <link
+      rel="preload"
+      href="assets/images/logo-dark.png"
+      as="image"
+      type="image/png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,600;1,14..32,600&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__menu">
+          <a class="logo" href="index.html">
+            <img
+              class="logo__image logo__image--light"
+              src="assets/images/logo.png"
+              alt="Coffee House"
+              width="100"
+              height="60"
+              loading="lazy"
+            />
+            <img
+              class="logo__image logo__image--dark"
+              src="assets/images/logo-dark.png"
+              alt="Coffee House"
+              width="100"
+              height="60"
+              loading="lazy"
+            />
+          </a>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#favorite-coffee">Favorite coffee</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#about">About</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#mobile-app">Mobile app</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#contacts">Contact us</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__actions">
+            <input
+              class="theme-switch__input visually-hidden"
+              type="checkbox"
+              id="theme-switch"
+            />
+            <label class="theme-switch" for="theme-switch">
+              <span class="theme-switch__indicator"></span>
+              <span class="theme-switch__icon theme-switch__icon--light"
+                ><svg
+                  class="theme-switch__svg"
+                  viewBox="0 0 22 22"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="22"
+                  height="22"
+                  fill="none"
+                >
+                  <path
+                    d="M10 3L10 1C10 0.45 10.45 0 11 0C11.55 0 12 0.45 12 1L12 3C12 3.55 11.55 4 11 4C10.45 4 10 3.55 10 3ZM17.36 6.05L18.77 4.63C19.16 4.24 19.16 3.61 18.77 3.22C18.38 2.83 17.75 2.83 17.36 3.22L15.95 4.64C15.56 5.03 15.56 5.66 15.95 6.05C16.34 6.44 16.97 6.44 17.36 6.05ZM21 10L19 10C18.45 10 18 10.45 18 11C18 11.55 18.45 12 19 12L21 12C21.55 12 22 11.55 22 11C22 10.45 21.55 10 21 10ZM11 18C10.45 18 10 18.45 10 19L10 21C10 21.55 10.45 22 11 22C11.55 22 12 21.55 12 21L12 19C12 18.45 11.55 18 11 18ZM4.64 6.05L3.22 4.64C2.83 4.25 2.83 3.61 3.22 3.23C3.61 2.85 4.25 2.84 4.63 3.23L6.04 4.64C6.43 5.03 6.43 5.67 6.04 6.05C5.65 6.43 5.02 6.44 4.64 6.05ZM15.95 15.95C15.56 16.34 15.56 16.98 15.95 17.36L17.36 18.77C17.75 19.16 18.39 19.16 18.77 18.77C19.16 18.38 19.16 17.74 18.77 17.36L17.36 15.95C16.98 15.56 16.34 15.56 15.95 15.95ZM1 12L3 12C3.55 12 4 11.55 4 11C4 10.45 3.55 10 3 10L1 10C0.45 10 0 10.45 0 11C0 11.55 0.45 12 1 12ZM4.64 18.78L6.05 17.37C6.44 16.98 6.44 16.34 6.05 15.96C5.66 15.58 5.02 15.57 4.64 15.96L3.23 17.37C2.84 17.76 2.84 18.4 3.23 18.78C3.61 19.17 4.25 19.17 4.64 18.78ZM11 5C7.69 5 5 7.69 5 11C5 14.31 7.69 17 11 17C14.31 17 17 14.31 17 11C17 7.69 14.31 5 11 5Z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  /></svg
+              ></span>
+              <span class="theme-switch__icon theme-switch__icon--dark"
+                ><svg
+                  class="theme-switch__svg"
+                  viewBox="0 0 18 18"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="18"
+                  height="18"
+                  fill="none"
+                >
+                  <path
+                    d="M9 0C4.03 0 0 4.03 0 9C0 13.97 4.03 18 9 18C13.97 18 18 13.97 18 9C18 8.54 17.96 8.08 17.9 7.64C16.92 9.01 15.32 9.9 13.5 9.9C10.52 9.9 8.1 7.48 8.1 4.5C8.1 2.69 8.99 1.08 10.36 0.0999999C9.92 0.0399999 9.46 0 9 0Z"
+                    fill="currentColor"
+                    fill-rule="nonzero"
+                  /></svg
+              ></span>
+              <span class="visually-hidden">Switch colour theme</span>
+            </label>
+            <a class="menu-link" href="menu.html"
+              >Menu<svg
+                class="menu-link__icon"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="20"
+                height="20"
+                fill="none"
+              >
+                <path
+                  d="M0 9.4C0 9.73137 0.268629 10 0.6 10L13.4 10C13.7314 10 14 9.73137 14 9.4L14 6C14 2.68629 11.3137 0 8 0L6 0C2.68629 0 0 2.68629 0 6L0 9.4Z"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  transform="matrix(-1,0,0,-1,17,21)"
+                  vector-effect="non-scaling-stroke"
+                />
+                <path
+                  d="M5 5.5C5 4.5 4.28571 3.5 2.85714 3.5C1.27919 3.5 0 2.22081 0 0.642857L0 0"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  transform="matrix(-1,0,0,1,17,3.5)"
+                  vector-effect="non-scaling-stroke"
+                />
+                <path
+                  d="M5 6L5 5.5C5 3.84315 3.65685 2.5 2 2.5C0.895431 2.5 0 1.60457 0 0.5L0 0"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  transform="matrix(-1,0,0,1,13,3)"
+                  vector-effect="non-scaling-stroke"
+                />
+                <path
+                  d="M16 11L18.5 11C19.8807 11 21 12.1193 21 13.5C21 14.8807 19.8807 16 18.5 16L17 16"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  vector-effect="non-scaling-stroke"
+                /></svg
+            ></a>
+            <button class="burger" type="button">
+              <span class="visually-hidden">Menu</span>
+              <span class="burger__line burger__line--top"></span>
+              <span class="burger__line burger__line--bottom"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="mobile-menu">
+      <nav class="mobile-menu__nav">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#favorite-coffee"
+              >Favorite coffee</a
+            >
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#about">About</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#mobile-app">Mobile app</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#contacts">Contact us</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="mobile-menu__cta" href="menu.html"
+        >Menu<svg
+          class="menu-link__icon"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="20"
+          height="20"
+          fill="none"
+        >
+          <path
+            d="M0 9.4C0 9.73137 0.268629 10 0.6 10L13.4 10C13.7314 10 14 9.73137 14 9.4L14 6C14 2.68629 11.3137 0 8 0L6 0C2.68629 0 0 2.68629 0 6L0 9.4Z"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            transform="matrix(-1,0,0,-1,17,21)"
+            vector-effect="non-scaling-stroke"
+          />
+          <path
+            d="M5 5.5C5 4.5 4.28571 3.5 2.85714 3.5C1.27919 3.5 0 2.22081 0 0.642857L0 0"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            transform="matrix(-1,0,0,1,17,3.5)"
+            vector-effect="non-scaling-stroke"
+          />
+          <path
+            d="M5 6L5 5.5C5 3.84315 3.65685 2.5 2 2.5C0.895431 2.5 0 1.60457 0 0.5L0 0"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            transform="matrix(-1,0,0,1,13,3)"
+            vector-effect="non-scaling-stroke"
+          />
+          <path
+            d="M16 11L18.5 11C19.8807 11 21 12.1193 21 13.5C21 14.8807 19.8807 16 18.5 16L17 16"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            vector-effect="non-scaling-stroke"
+          /></svg
+      ></a>
+    </div>
+    <main class="main">
+      <section class="hero section section--first">
+        <div class="container">
+          <div class="hero__inner">
+            <div class="hero__offer">
+              <h1 class="hero__title">
+                <em class="title__accent">Enjoy</em> premium coffee at our
+                charming cafe
+              </h1>
+              <p class="hero__text">
+                With its inviting atmosphere and delicious coffee options, the
+                Coffee House Resource is a popular destination for coffee lovers
+                and those seeking a warm and inviting space to enjoy their
+                favorite beverage.
+              </p>
+              <a class="button" href="menu.html"
+                >Menu<svg
+                  class="button__icon"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="20"
+                  height="20"
+                  fill="none"
+                >
+                  <path
+                    d="M0 9.4C0 9.73137 0.268629 10 0.6 10L13.4 10C13.7314 10 14 9.73137 14 9.4L14 6C14 2.68629 11.3137 0 8 0L6 0C2.68629 0 0 2.68629 0 6L0 9.4Z"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    transform="matrix(-1,0,0,-1,17,21)"
+                    vector-effect="non-scaling-stroke"
+                  />
+                  <path
+                    d="M5 5.5C5 4.5 4.28571 3.5 2.85714 3.5C1.27919 3.5 0 2.22081 0 0.642857L0 0"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    transform="matrix(-1,0,0,1,17,3.5)"
+                    vector-effect="non-scaling-stroke"
+                  />
+                  <path
+                    d="M5 6L5 5.5C5 3.84315 3.65685 2.5 2 2.5C0.895431 2.5 0 1.60457 0 0.5L0 0"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    transform="matrix(-1,0,0,1,13,3)"
+                    vector-effect="non-scaling-stroke"
+                  />
+                  <path
+                    d="M16 11L18.5 11C19.8807 11 21 12.1193 21 13.5C21 14.8807 19.8807 16 18.5 16L17 16"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    vector-effect="non-scaling-stroke"
+                  /></svg
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="favorite-coffee section" id="favorite-coffee">
+        <div class="container">
+          <h2 class="title title--center">
+            Choose your <em class="title__accent">favorite</em> coffee
+          </h2>
+          <div class="slider">
+            <button class="slider__button slider__button--prev" type="button">
+              <span class="visually-hidden">Previous slide</span>
+              <svg
+                class="slider__arrow"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="24"
+                height="24"
+                fill="none"
+              >
+                <path
+                  d="M12.5 6L0 6M6 12L0 6L6 0"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.000000"
+                  transform="matrix(-1,0,0,1,18.5,6)"
+                  vector-effect="non-scaling-stroke"
+                />
+              </svg>
+            </button>
+            <div class="slider__viewport">
+              <ul class="slider__list">
+                <li class="slider__slide">
+                  <div class="slider__content">
+                    <div
+                      class="slider__image slider__image--smores-frappuccino"
+                    ></div>
+                    <div class="slider__description">
+                      <h3 class="slider__name">S’mores Frappuccino</h3>
+                      <p class="slider__text">
+                        This new drink takes an espresso and mixes it with brown
+                        sugar and cinnamon before being topped with oat milk.
+                      </p>
+                      <p class="slider__price">$5.50</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="slider__slide">
+                  <div class="slider__content">
+                    <div
+                      class="slider__image slider__image--caramel-macchiato"
+                    ></div>
+                    <div class="slider__description">
+                      <h3 class="slider__name">Caramel Macchiato</h3>
+                      <p class="slider__text">
+                        Fragrant and unique classic espresso with rich
+                        caramel-peanut syrup, with cream under whipped thick
+                        foam.
+                      </p>
+                      <p class="slider__price">$5.00</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="slider__slide">
+                  <div class="slider__content">
+                    <div class="slider__image slider__image--ice-coffee"></div>
+                    <div class="slider__description">
+                      <h3 class="slider__name">Ice coffee</h3>
+                      <p class="slider__text">
+                        A popular summer drink that tones and invigorates.
+                        Prepared from coffee, milk and ice.
+                      </p>
+                      <p class="slider__price">$4.50</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <button class="slider__button slider__button--next" type="button">
+              <span class="visually-hidden">Next slide</span>
+              <svg
+                class="slider__arrow"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="24"
+                height="24"
+                fill="none"
+              >
+                <path
+                  d="M12.5 6L0 6M6 12L0 6L6 0"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.000000"
+                  transform="matrix(-1,0,0,1,18.5,6)"
+                  vector-effect="non-scaling-stroke"
+                />
+              </svg>
+            </button>
+          </div>
+          <ul class="slider__controls">
+            <li class="slider__controls-item">
+              <button
+                class="slider__control slider__control--active"
+                type="button"
+              >
+                <span class="visually-hidden">Slide 1</span>
+              </button>
+            </li>
+            <li class="slider__controls-item">
+              <button class="slider__control" type="button">
+                <span class="visually-hidden">Slide 2</span>
+              </button>
+            </li>
+            <li class="slider__controls-item">
+              <button class="slider__control" type="button">
+                <span class="visually-hidden">Slide 3</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="about section" id="about">
+        <div class="container">
+          <h2 class="title">
+            Resource is
+            <em class="title__accent">the perfect and cozy place</em> where you
+            can enjoy a variety of hot beverages, relax, catch up with friends,
+            or get some work done.
+          </h2>
+          <div class="about__grid">
+            <div class="about__column">
+              <div
+                class="about__image about__image--tall about__image--woman"
+              ></div>
+              <div
+                class="about__image about__image--wide about__image--table"
+              ></div>
+            </div>
+            <div class="about__column">
+              <div
+                class="about__image about__image--wide about__image--man"
+              ></div>
+              <div
+                class="about__image about__image--tall about__image--couple"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mobile-app section" id="mobile-app">
+        <div class="container mobile-app__container">
+          <div class="mobile-app__offer">
+            <h2 class="title">
+              <em class="title__accent">Download</em> our app to start ordering
+            </h2>
+            <p class="mobile-app__text">
+              Download the Resource app today and experience the comfort of
+              ordering your favorite coffee from wherever you are
+            </p>
+            <div class="mobile-app__buttons">
+              <a class="store-button" href="#">
+                <svg
+                  class="store-button__icon"
+                  viewBox="0 0 26.4102 31.6486"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="26"
+                  height="32"
+                  fill="none"
+                >
+                  <g>
+                    <path
+                      d="M19.648 -0C19.8592 1.872 19.0983 3.7167 17.9863 5.07264C16.8259 6.40748 14.9695 7.42846 13.1615 7.29696C12.9248 5.49566 13.8409 3.58024 14.8664 2.41164C16.0256 1.08548 18.0384 0.06948 19.648 -0ZM25.5669 10.7989C25.3653 10.9162 22.0212 12.8621 22.0578 16.8306C22.0998 21.6229 26.3572 23.2071 26.4093 23.2245C26.3839 23.3361 25.7426 25.5108 24.1458 27.719C22.8124 29.6629 21.4153 31.5635 19.1963 31.5982C18.1414 31.6219 17.429 31.3261 16.6868 31.0179C15.9125 30.6964 15.1057 30.3614 13.8435 30.3614C11.3483 30.3614 10.576 31.5635 8.50842 31.6466C6.39504 31.7223 4.7804 29.5711 3.3986 27.6446C0.6363 23.7107 -1.514 16.5589 1.36918 11.6922C2.76624 9.30542 5.31352 7.76836 8.03638 7.72742C9.2354 7.70352 10.3854 8.15406 11.3935 8.549C12.1645 8.85104 12.8524 9.12056 13.4159 9.12056C13.9109 9.12056 14.5795 8.86182 15.3589 8.56024C16.5871 8.08496 18.0901 7.50334 19.6213 7.66044C20.6684 7.6902 23.6483 8.06362 25.5709 10.7966L25.5669 10.7989Z"
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                    />
+                  </g>
+                </svg>
+                <span class="store-button__label">
+                  <span class="store-button__caption">Available on the</span>
+                  <span class="store-button__name">App Store</span>
+                </span>
+              </a>
+              <a class="store-button" href="#">
+                <svg
+                  class="store-button__icon"
+                  viewBox="0 0 30.3438 32.7934"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="30"
+                  height="33"
+                  fill="none"
+                >
+                  <g>
+                    <path
+                      d="M0.456669 24.2806C0.167404 23.9819 0 23.5168 0 22.9145L0 1.43163C0 0.829349 0.167404 0.364283 0.456669 0.0655717L0.528063 0L12.7314 12.0334L12.7314 12.3176L0.528063 24.351L0.456669 24.2806Z"
+                      fill="currentColor"
+                      fill-rule="nonzero"
+                      transform="matrix(1.25299,0,0,-1.23841,0,31.4724)"
+                    />
+                    <path
+                      d="M4.06326 0L0 4.01317L0 4.29731L4.06818 8.31048L4.15927 8.25826L8.97708 5.55408C10.352 4.78666 10.352 3.52382 8.97708 2.75154L4.15927 0.0522151L4.06326 0Z"
+                      fill="currentColor"
+                      fill-rule="nonzero"
+                      transform="matrix(1.25299,0,0,-1.23841,17.8027,21.5399)"
+                    />
+                    <path
+                      d="M16.434 8.39191L12.2747 12.4949L0 0.384997C0.45667 -0.0885691 1.20137 -0.145641 2.04825 0.327925L16.434 8.39191Z"
+                      fill="currentColor"
+                      fill-rule="nonzero"
+                      transform="matrix(1.25299,0,0,-1.23841,1.49805,32.7933)"
+                    />
+                    <path
+                      d="M16.434 4.10302L2.04825 12.167C1.20137 12.6357 0.45667 12.5786 0 12.1051L12.2747 0L16.434 4.10302Z"
+                      fill="currentColor"
+                      fill-rule="nonzero"
+                      transform="matrix(1.25299,0,0,-1.23841,1.49805,15.4688)"
+                    />
+                  </g>
+                </svg>
+                <span class="store-button__label">
+                  <span class="store-button__caption">Available on</span>
+                  <span class="store-button__name">Google Play</span>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="mobile-app__screens"></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer section" id="contacts">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__offer">
+            <h2 class="title title--invert">
+              Sip, Savor, Smile.
+              <em class="title__accent">It&rsquo;s coffee time!</em>
+            </h2>
+            <ul class="socials">
+              <li class="socials__item">
+                <a class="social-button" href="#" aria-label="Twitter">
+                  <svg
+                    class="social-button__icon"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="24"
+                    height="24"
+                    fill="none"
+                  >
+                    <path
+                      d="M19.86 4.54006C19.2577 3.84757 18.4573 3.35675 17.567 3.13398C16.6767 2.91122 15.7395 2.96725 14.8821 3.29451C14.0247 3.62177 13.2884 4.20446 12.773 4.96377C12.2575 5.72309 11.9877 6.62239 12 7.54006L12 8.54006C10.2426 8.58562 8.50127 8.19587 6.93101 7.4055C5.36074 6.61514 4.01032 5.44869 3 4.01006C3 4.01006 -1 13.0101 8 17.0101C5.94053 18.408 3.48716 19.109 1 19.0101C10 24.0101 21 19.0101 21 7.51006C20.9991 7.23151 20.9723 6.95365 20.92 6.68006C21.9406 5.67355 23 3.01006 23 3.01006C23 3.01006 20.9821 4.20217 19.86 4.54006Z"
+                      fill-rule="nonzero"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      vector-effect="non-scaling-stroke"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="social-button" href="#" aria-label="Instagram">
+                  <svg
+                    class="social-button__icon"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="24"
+                    height="24"
+                    fill="none"
+                  >
+                    <path
+                      d="M12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12C16 14.2091 14.2091 16 12 16Z"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      vector-effect="non-scaling-stroke"
+                    />
+                    <path
+                      d="M3 16C3 18.7614 5.23858 21 8 21L16 21C18.7614 21 21 18.7614 21 16L21 8C21 5.23858 18.7614 3 16 3L8 3C5.23858 3 3 5.23858 3 8L3 16Z"
+                      stroke="currentColor"
+                      vector-effect="non-scaling-stroke"
+                    />
+                    <path
+                      d="M17.5 6.51L17.51 6.5"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      vector-effect="non-scaling-stroke"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="social-button" href="#" aria-label="Facebook">
+                  <svg
+                    class="social-button__icon"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="24"
+                    height="24"
+                    fill="none"
+                  >
+                    <path
+                      d="M14 2C12.6739 2 11.4021 2.52678 10.4645 3.46447C9.52678 4.40215 9 5.67392 9 7L9 10L6 10L6 14L9 14L9 22L13 22L13 14L16 14L17 10L13 10L13 7C13 6.73478 13.1054 6.48043 13.2929 6.29289C13.4804 6.10536 13.7348 6 14 6L17 6L17 2L14 2Z"
+                      fill-rule="nonzero"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      vector-effect="non-scaling-stroke"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__contacts">
+            <h3 class="footer__subtitle">Contact us</h3>
+            <ul class="contacts">
+              <li class="contacts__item">
+                <a
+                  class="contacts__link"
+                  href="https://maps.google.com/?q=8558+Green+Rd+LA"
+                >
+                  <svg
+                    class="contacts__icon"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="20"
+                    height="20"
+                    fill="none"
+                  >
+                    <path
+                      d="M12 22C12 22 4 14.4183 4 10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10C20 14.4183 12 22 12 22Z"
+                      fill-rule="nonzero"
+                      stroke="currentColor"
+                      vector-effect="non-scaling-stroke"
+                    />
+                    <path
+                      d="M12 11C12.5523 11 13 10.5523 13 10C13 9.44771 12.5523 9 12 9C11.4477 9 11 9.44771 11 10C11 10.5523 11.4477 11 12 11Z"
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M12 11C11.4477 11 11 10.5523 11 10C11 9.44771 11.4477 9 12 9C12.5523 9 13 9.44771 13 10C13 10.5523 12.5523 11 12 11Z"
+                      fill-rule="evenodd"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      vector-effect="non-scaling-stroke"
+                    />
+                  </svg>
+                  8558 Green Rd., LA
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link" href="tel:+16035550123">
+                  <svg
+                    class="contacts__icon"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="20"
+                    height="20"
+                    fill="none"
+                  >
+                    <path
+                      d="M13.9998 15.5C11.2181 14.1038 9.49985 12.5 8.49985 10L9.2698 5.8699L7.81436 2L4.06344 2C2.9359 2 2.04809 2.93271 2.21653 4.0476C2.63707 6.83112 3.87678 11.8769 7.49985 15.5C11.3043 19.3044 16.7833 20.9557 19.8 21.6123C20.9647 21.8658 21.9999 20.9575 21.9999 19.7655L21.9998 16.1812L18.1181 14.702L13.9998 15.5Z"
+                      fill-rule="nonzero"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      vector-effect="non-scaling-stroke"
+                    />
+                  </svg>
+                  +1 (603) 555-0123
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link" href="#">
+                  <svg
+                    class="contacts__icon"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="20"
+                    height="20"
+                    fill="none"
+                  >
+                    <path
+                      d="M12 6L12 12L18 12"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      vector-effect="non-scaling-stroke"
+                    />
+                    <path
+                      d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22Z"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      vector-effect="non-scaling-stroke"
+                    />
+                  </svg>
+                  Mon–Sat: 9:00–23:00
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="scripts/script.js" defer></script>
+  </body>
+</html>
