@@ -994,24 +994,7 @@ table {
   }
 }
 
-@media (min-width: 1024px) {
-  .hero__inner {
-    padding: 100px;
-  }
-
-  .menu__title {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .menu__more {
-    display: none;
-  }
-
-  .slider__button {
-    display: flex;
-  }
-
+@media (min-width: 769px) {
   .theme-switch {
     padding: 4px;
     border-radius: 22px;
@@ -1043,6 +1026,26 @@ table {
   .burger,
   .mobile-menu {
     display: none;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .hero__inner {
+    padding: 100px;
+  }
+
+  .menu__title {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .menu__more {
+    display: none;
+  }
+
+  .slider__button {
+    display: flex;
   }
 
   .mobile-app__container {
