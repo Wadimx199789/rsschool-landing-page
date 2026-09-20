@@ -322,7 +322,7 @@
             </button>
             <div class="slider__viewport">
               <ul class="slider__list">
-                <li class="slider__slide">
+                <li class="slider__slide slider__slide--active" data-slide="0">
                   <div class="slider__content">
                     <div
                       class="slider__image slider__image--smores-frappuccino"
@@ -337,7 +337,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="slider__slide">
+                <li class="slider__slide" data-slide="1">
                   <div class="slider__content">
                     <div
                       class="slider__image slider__image--caramel-macchiato"
@@ -353,7 +353,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="slider__slide">
+                <li class="slider__slide" data-slide="2">
                   <div class="slider__content">
                     <div class="slider__image slider__image--ice-coffee"></div>
                     <div class="slider__description">
@@ -396,17 +396,18 @@
               <button
                 class="slider__control slider__control--active"
                 type="button"
+                data-slide="0"
               >
                 <span class="visually-hidden">Slide 1</span>
               </button>
             </li>
             <li class="slider__controls-item">
-              <button class="slider__control" type="button">
+              <button class="slider__control" type="button" data-slide="1">
                 <span class="visually-hidden">Slide 2</span>
               </button>
             </li>
             <li class="slider__controls-item">
-              <button class="slider__control" type="button">
+              <button class="slider__control" type="button" data-slide="2">
                 <span class="visually-hidden">Slide 3</span>
               </button>
             </li>
@@ -709,5 +710,6 @@
       </div>
     </footer>
     <script src="scripts/script.js" defer></script>
+    <script src="scripts/slider.js" defer></script>
   </body>
 </html>
