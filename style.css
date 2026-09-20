@@ -999,6 +999,10 @@ table {
     display: flex;
   }
 
+  .menu-link {
+    display: flex;
+  }
+
   .burger,
   .mobile-menu {
     display: none;
@@ -1041,10 +1045,6 @@ table {
 
   .theme-switch__input:checked + .theme-switch .theme-switch__indicator {
     transform: translateX(44px);
-  }
-
-  .menu-link {
-    display: flex;
   }
 
   .mobile-app__container {
