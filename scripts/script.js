@@ -2,9 +2,7 @@ const THEME_KEY = "theme";
 const DARK = "dark";
 const LIGHT = "light";
 
-const MOBILE_WIDTH = 768;
-
-const desktopQuery = window.matchMedia(`(min-width: ${MOBILE_WIDTH + 1}px)`);
+const desktopQuery = window.matchMedia("(min-width: 769px)");
 const themeSwitch = document.getElementById("theme-switch");
 const burger = document.querySelector(".burger");
 const mobileMenu = document.querySelector(".mobile-menu");
