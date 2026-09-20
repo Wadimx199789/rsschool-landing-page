@@ -994,6 +994,17 @@ table {
   }
 }
 
+@media (min-width: 769px) {
+  .nav {
+    display: flex;
+  }
+
+  .burger,
+  .mobile-menu {
+    display: none;
+  }
+}
+
 @media (min-width: 1024px) {
   .hero__inner {
     padding: 100px;
@@ -1032,17 +1043,8 @@ table {
     transform: translateX(44px);
   }
 
-  .nav {
-    display: flex;
-  }
-
   .menu-link {
     display: flex;
-  }
-
-  .burger,
-  .mobile-menu {
-    display: none;
   }
 
   .mobile-app__container {

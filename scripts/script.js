@@ -2,6 +2,9 @@ const THEME_KEY = "theme";
 const DARK = "dark";
 const LIGHT = "light";
 
+const MOBILE_WIDTH = 768;
+
+const desktopQuery = window.matchMedia(`(min-width: ${MOBILE_WIDTH + 1}px)`);
 const themeSwitch = document.getElementById("theme-switch");
 const burger = document.querySelector(".burger");
 const mobileMenu = document.querySelector(".mobile-menu");
@@ -42,6 +45,12 @@ const initMobileMenu = () => {
 
   mobileMenu.addEventListener("click", (event) => {
     if (event.target.closest("a")) {
+      toggleMenu(false);
+    }
+  });
+
+  desktopQuery.addEventListener("change", (event) => {
+    if (event.matches) {
       toggleMenu(false);
     }
   });
